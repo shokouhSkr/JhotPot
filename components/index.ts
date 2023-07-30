@@ -1,5 +1,7 @@
+import Navbar from "./home/Navbar";
+import Category from "./home/Category";
+import RecipeCard from "./home/RecipeCard";
 import DarkModeToggle from "./DarkModeToggle";
-import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 
-export { DarkModeToggle, Header, Footer };
+export { DarkModeToggle, Footer, RecipeCard, Category, Navbar };

@@ -10,8 +10,10 @@ module.exports = {
     colors: {
       white: "#fff",
       orange: "#fc6011",
+      "light-orange": "#fdd8be",
       navy: "#11263c",
       "dark-gray": "#52616b",
+      "main-gray": "#c8d7e2",
       "light-gray": "#f0f5f9",
     },
     screens: {

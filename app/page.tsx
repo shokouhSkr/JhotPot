@@ -1,11 +1,11 @@
-import Button from "@/components/Button";
+import { Category, Navbar, RecipeCard } from "@/components";
 
 export default function Home() {
   return (
-    <section className="text-lg">
-      <h1>Home</h1>
-
-      <Button />
+    <section>
+      <Navbar />
+      <Category />
+      <RecipeCard />
     </section>
   );
 }
