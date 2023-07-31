@@ -2,7 +2,7 @@ import { Category, Navbar, RecipeCard } from "@/components";
 
 export default function Home() {
   return (
-    <section>
+    <section className="ml-[60px]">
       <Navbar />
       <Category />
       <RecipeCard />

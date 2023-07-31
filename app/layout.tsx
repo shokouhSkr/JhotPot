@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         className={`${roboto.className} scroll-smooth bg-white text-navy transition-colors duration-500 dark:bg-navy dark:text-white`}
       >
         <Providers>
-          <main className="min-h-[calc(100vh-70px)]">{children}</main>
+          <main className="min-h-[calc(100dvh-70px)]">{children}</main>
           <Footer />
         </Providers>
       </body>

@@ -15,6 +15,8 @@ module.exports = {
       "dark-gray": "#52616b",
       "main-gray": "#c8d7e2",
       "light-gray": "#f0f5f9",
+      navbar: "#f0f5f9",
+      footer: "#f9f9f9",
     },
     screens: {
       "2xs": { min: "375px" },

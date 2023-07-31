@@ -8,7 +8,7 @@ const Footer = () => {
   const pathname = usePathname();
 
   return (
-    <footer className="bg-light-gray p-4 font-medium text-main-gray">
+    <footer className="bg-footer p-4 font-medium text-main-gray">
       <ul className="flex items-center justify-around">
         {footerLinks.map((link) => {
           const { icon, path, title } = link;
@@ -17,7 +17,7 @@ const Footer = () => {
             <Link
               key={title}
               href={path}
-              className={` flex items-center gap-2 px-3 py-1.5 ${
+              className={`flex items-center gap-2 px-3 py-1.5 ${
                 pathname === path && "rounded-lg border border-orange bg-light-orange text-orange"
               }`}
             >
