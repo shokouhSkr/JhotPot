@@ -1,4 +1,4 @@
-import { Category, Navbar, RecipeCard } from "@/components";
+import { Category, Navbar, Recipes } from "@/components";
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       </h1>
       <Navbar />
       <Category />
-      <RecipeCard />
+      <Recipes />
     </section>
   );
 }
