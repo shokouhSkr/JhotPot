@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { LuAlignJustify, LuSearch } from "react-icons/lu";
+import NavbarBtn from "./NavbarBtn";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
@@ -9,27 +10,23 @@ const Navbar = () => {
 
   return (
     <aside className="fixed bottom-[70px] left-0 top-0 w-14 bg-navbar">
-      <nav className="mt-6 p-1">
+      <nav className="mt-[15px] p-1">
         {/* BUTTONS */}
-        <div className="mb-16 flex flex-col items-center gap-6">
-          <button
-            type="button"
-            onClick={() => {
+        <div className="mb-16 flex flex-col items-center gap-2">
+          <NavbarBtn
+            icon={<LuAlignJustify />}
+            clickHandler={() => {
               setIsSidebarOpen(true);
               console.log("open sidebar");
             }}
-          >
-            <LuAlignJustify />
-          </button>
-          <button
-            type="button"
-            onClick={() => {
+          />
+          <NavbarBtn
+            icon={<LuSearch />}
+            clickHandler={() => {
               setIsSearchModalOpen(true);
               console.log("open search modal");
             }}
-          >
-            <LuSearch />
-          </button>
+          />
         </div>
 
         {/* LINKS */}
