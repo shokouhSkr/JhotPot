@@ -1,15 +1,15 @@
+import { CardRecipe } from "@/types";
 import Image from "next/image";
-import img from "@/public/images/pizza1.png";
 import { PiCookingPotBold, PiPepperBold, PiPlusCircle, PiShareNetworkFill } from "react-icons/pi";
 
-const SavedCardRecipe = () => {
+const SavedCardRecipe = ({ title, image, category, time, ingredients }: CardRecipe) => {
   return (
-    <div className="relative grid grid-cols-4 rounded-md border-[1.5px] border-navbar p-2">
+    <div className="relative grid grid-cols-4 rounded-md border-[1.5px] border-navbar p-2 shadow-md">
       {/* LEFT */}
       <div className="col-span-1">
         {/* IMAGE */}
         <div className="absolute -left-4 -top-5">
-          <Image src={img} alt="image" width={115} height={115} />
+          <Image src={image} alt={title} width={115} height={115} />
         </div>
       </div>
 
@@ -18,7 +18,7 @@ const SavedCardRecipe = () => {
         {/* CATEGORY */}
         <div className="flex-between mb-2">
           <div className="border-l-2 border-orange pl-2 text-[11px] font-semibold text-orange">
-            Chinese
+            {category}
           </div>
 
           {/* BUTTONS */}
@@ -33,7 +33,7 @@ const SavedCardRecipe = () => {
         </div>
 
         {/* TITLE */}
-        <h1 className="mb-2 text-lg font-bold">Hot & Prawn Pizza</h1>
+        <h1 className="mb-2 font-bold 2xs:text-lg">{title}</h1>
 
         {/* INGREDIENTS & TIME */}
         <div className="flex-between font-semibold text-dark-gray">
@@ -41,13 +41,13 @@ const SavedCardRecipe = () => {
             <span className="text-lg font-semibold">
               <PiCookingPotBold />
             </span>
-            <span className="text-xs">20 min</span>
+            <span className="text-xs">{time} min</span>
           </div>
           <div className="flex items-center gap-1">
             <span className="text-lg">
               <PiPepperBold />
             </span>
-            <span className="text-xs">5 ing</span>
+            <span className="text-xs">{ingredients} ing</span>
           </div>
         </div>
       </div>

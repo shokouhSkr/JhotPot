@@ -9,7 +9,6 @@ export default function Home() {
       <Category image />
       <Sidebar />
       <Recipes />
-      {/* <div className="h-[calc(100dvh-50px) bg-red-200">ff</div> */}
     </section>
   );
 }

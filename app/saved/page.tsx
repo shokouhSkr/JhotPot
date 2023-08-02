@@ -1,4 +1,5 @@
 import { Category, Header, SavedCardRecipe } from "@/components";
+import { savedRecipes } from "@/helpers/constants";
 
 const Saved = () => {
   return (
@@ -9,10 +10,9 @@ const Saved = () => {
       </div>
 
       <div className="flex flex-col gap-9 p-6">
-        <SavedCardRecipe />
-        <SavedCardRecipe />
-        <SavedCardRecipe />
-        <SavedCardRecipe />
+        {savedRecipes.map((item) => {
+          return <SavedCardRecipe key={item.title} {...item} />;
+        })}
       </div>
     </section>
   );

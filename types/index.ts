@@ -11,11 +11,11 @@ export type FooterItemsType = {
   path: string;
 }[];
 
-export type FooterLinks = {
+export type FooterLink = {
   title: string;
   icon: ReactNode;
   path: string;
-}[];
+};
 
 export type NavbarBtnProps = {
   clickHandler: () => void;
@@ -25,4 +25,13 @@ export type NavbarBtnProps = {
 export type CategoryItem = {
   title: string;
   image: string;
+};
+
+export type CardRecipe = {
+  title: string;
+  image: string;
+  category: string;
+  time: number;
+  ingredients: number;
+  description: string;
 };
