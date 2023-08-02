@@ -7,8 +7,8 @@ const SingleCard = () => {
   return (
     <div className="relative flex h-96 w-52 flex-1 flex-col items-end justify-end rounded-2xl">
       {/* IMAGE */}
-      <div className="absolute -right-5 -top-[60px]">
-        <div className="relative h-40 w-40">
+      <div className="absolute -right-[25px] -top-[66px]">
+        <div className="relative h-[160px] w-[160px]">
           <Image src={Img} alt="efef" fill className="object-cover" />
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { LuAlignJustify, LuSearch } from "react-icons/lu";
-import NavbarBtn from "./NavbarBtn";
+import NavbarBtn from "./SidebarBtn";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
@@ -30,7 +30,7 @@ const Navbar = () => {
         </div>
 
         {/* LINKS */}
-        <div className="ml-0 mt-32 flex flex-col gap-16 text-[13px]">
+        <div className="ml-0 flex flex-col gap-16 text-[13px]">
           <a href="#snacks" className="-rotate-90">
             Refrigerator
           </a>
