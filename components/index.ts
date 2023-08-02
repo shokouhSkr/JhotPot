@@ -4,18 +4,20 @@ import Sidebar from "./Sidebar";
 import SidebarBtn from "./SidebarBtn";
 import Category from "./Category";
 import Recipes from "./Recipes";
-import RecipeCard from "./SingleCard";
+import CardRecipe from "./CardRecipe";
 import Drawer from "./Drawer";
+import SavedCardRecipe from "./SavedCardRecipe";
 import DarkModeToggle from "./DarkModeToggle";
 
 export {
   DarkModeToggle,
   SidebarBtn,
   Footer,
-  RecipeCard,
+  CardRecipe,
   Category,
   Sidebar,
   Drawer,
   Recipes,
   Header,
+  SavedCardRecipe,
 };

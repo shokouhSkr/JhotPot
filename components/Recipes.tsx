@@ -1,12 +1,12 @@
-import SingleCard from "./SingleCard";
+import { CardRecipe } from "@/components";
 
 const Recipes = () => {
   return (
     <section className="hide-scrollbar mt-6 flex h-[420px] items-end overflow-scroll">
       <div className="flex items-start space-x-8">
-        <SingleCard />
-        <SingleCard />
-        <SingleCard />
+        <CardRecipe />
+        <CardRecipe />
+        <CardRecipe />
       </div>
     </section>
   );

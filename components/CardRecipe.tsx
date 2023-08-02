@@ -3,7 +3,7 @@ import Img from "@/public/images/pizza.png";
 import { PiPepperBold, PiCookingPotBold, PiPlusCircle } from "react-icons/pi";
 import Link from "next/link";
 
-const SingleCard = () => {
+const SingleRecipe = () => {
   return (
     <div className="relative flex h-96 w-52 flex-1 flex-col items-end justify-end rounded-2xl">
       {/* IMAGE */}
@@ -62,4 +62,4 @@ const SingleCard = () => {
   );
 };
 
-export default SingleCard;
+export default SingleRecipe;
