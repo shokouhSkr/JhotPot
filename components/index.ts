@@ -9,11 +9,13 @@ import Drawer from "./Drawer";
 import SavedCardRecipe from "./SavedCardRecipe";
 import DarkModeToggle from "./DarkModeToggle";
 import Wrapper from "./Wrapper";
+import Stat from "./Stat";
 
 export {
   DarkModeToggle,
   SidebarBtn,
   Footer,
+  Stat,
   CardRecipe,
   Category,
   Sidebar,
