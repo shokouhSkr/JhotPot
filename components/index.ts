@@ -8,6 +8,7 @@ import CardRecipe from "./CardRecipe";
 import Drawer from "./Drawer";
 import SavedCardRecipe from "./SavedCardRecipe";
 import DarkModeToggle from "./DarkModeToggle";
+import Wrapper from "./Wrapper";
 
 export {
   DarkModeToggle,
@@ -20,4 +21,5 @@ export {
   Recipes,
   Header,
   SavedCardRecipe,
+  Wrapper,
 };

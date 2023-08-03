@@ -3,7 +3,7 @@ import { PiCaretLeftBold } from "react-icons/pi";
 
 const Header = ({ title, component }: { title?: string; component?: React.ReactNode }) => {
   return (
-    <header className="flex-between my-3">
+    <header className="flex-between relative z-20 my-3">
       <div className="flex items-center gap-4">
         <Link href="/" className="p-1">
           <PiCaretLeftBold />
