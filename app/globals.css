@@ -14,6 +14,10 @@
   @apply flex items-center justify-evenly;
 }
 
+.tab-active {
+  @apply text-orange;
+}
+
 .hide-scrollbar {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */

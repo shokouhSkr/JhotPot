@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { Dispatch, ReactNode, SetStateAction } from "react";
 
 export type ThemeContextProps = {
   isDarkMode: boolean;
@@ -34,4 +34,10 @@ export type CardRecipe = {
   time: number;
   ingredients: number;
   description: string;
+};
+
+export type SingleTabProps = {
+  activeTab: "Recipes" | "Reviews";
+  setActiveTab: Dispatch<SetStateAction<"Recipes" | "Reviews">>;
+  text: "Recipes" | "Reviews";
 };

@@ -10,6 +10,8 @@ import SavedCardRecipe from "./SavedCardRecipe";
 import DarkModeToggle from "./DarkModeToggle";
 import Wrapper from "./Wrapper";
 import Stat from "./Stat";
+import SingleTab from "./SingleTab";
+import CardReview from "./CardReview";
 
 export {
   DarkModeToggle,
@@ -24,4 +26,6 @@ export {
   Header,
   SavedCardRecipe,
   Wrapper,
+  SingleTab,
+  CardReview,
 };
