@@ -8,8 +8,8 @@ const CardReview = () => {
         {/* AVATAR */}
         <div className="mb-1 flex items-center gap-2">
           <div className="avatar">
-            <div className="relative w-12 rounded-full">
-              <Image src={img} alt="person" fill />
+            <div className="relative h-12 w-12 rounded-full">
+              <Image src={img} alt="person" fill className="object-cover" />
             </div>
           </div>
           <div>

@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Header, Wrapper, Stat, SingleTab, CardReview } from "@/components";
+import { Header, Wrapper, Stat, SingleTab, CardReview, Category, MiniRecipe } from "@/components";
 import Image from "next/image";
 import img from "@/public/images/person.jpg";
 import { BsBellFill, BsCloudUpload } from "react-icons/bs";
+import { recipes } from "@/helpers/constants";
 
 const Profile = () => {
   const [activeTab, setActiveTab] = useState<"Recipes" | "Reviews">("Reviews");
@@ -59,28 +60,28 @@ const Profile = () => {
 
       {/* TABS */}
       <div className="tabs mx-auto mb-4 max-w-md px-4">
-        <SingleTab activeTab={activeTab} setActiveTab={setActiveTab} text="Recipes" />
         <SingleTab activeTab={activeTab} setActiveTab={setActiveTab} text="Reviews" />
+        <SingleTab activeTab={activeTab} setActiveTab={setActiveTab} text="Recipes" />
 
-        {/* REVIEWS */}
-        <div
-          className={`${
-            activeTab === "Reviews" ? "block" : "hidden"
-          } hide-scrollbar mt-4 flex h-40 flex-col gap-2 overflow-y-scroll`}
-        >
+        {/* REVIEWS TAB */}
+        <div className={`${activeTab === "Reviews" ? "block" : "hidden"} mt-4 flex flex-col gap-2`}>
           {/* SINGLE REVIEW CARD */}
-          <CardReview/>
-          <CardReview/>
-          <CardReview/>
+          <CardReview />
+          <CardReview />
+          <CardReview />
         </div>
 
-        {/* RECIPES */}
-        <div
-          className={`${
-            activeTab === "Recipes" ? "block" : "hidden"
-          } hide-scrollbar mt-4 h-40 overflow-y-scroll bg-red-200`}
-        >
-          hi
+        {/* RECIPES TAB */}
+        <div className={`${activeTab === "Recipes" ? "block" : "hidden"} w-full`}>
+          <div className="mt-4">
+            <Category />
+          </div>
+
+          <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-8 2xs:grid-cols-2">
+            {recipes.map((recipe) => (
+              <MiniRecipe key={recipe.title} {...recipe} />
+            ))}
+          </div>
         </div>
       </div>
     </Wrapper>

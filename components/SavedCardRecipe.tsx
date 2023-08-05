@@ -4,7 +4,7 @@ import { PiCookingPotBold, PiPepperBold, PiPlusCircle, PiShareNetworkFill } from
 
 const SavedCardRecipe = ({ title, image, category, time, ingredients }: CardRecipe) => {
   return (
-    <div className="relative grid grid-cols-4 rounded-md border-[1.5px] border-navbar p-2 shadow-md">
+    <div className="relative grid grid-cols-4 rounded-md border-[1.5px] border-navbar p-2 ">
       {/* LEFT */}
       <div className="col-span-1">
         {/* IMAGE */}
@@ -15,8 +15,8 @@ const SavedCardRecipe = ({ title, image, category, time, ingredients }: CardReci
 
       {/* RIGHT */}
       <div className="col-span-3 col-start-2 ml-[25px] p-2 2xs:ml-4">
-        {/* CATEGORY */}
         <div className="flex-between mb-2">
+          {/* CATEGORY */}
           <div className="border-l-2 border-orange pl-2 text-[11px] font-semibold text-orange">
             {category}
           </div>

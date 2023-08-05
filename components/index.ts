@@ -12,6 +12,7 @@ import Wrapper from "./Wrapper";
 import Stat from "./Stat";
 import SingleTab from "./SingleTab";
 import CardReview from "./CardReview";
+import MiniRecipe from "./MiniRecipe";
 
 export {
   DarkModeToggle,
@@ -28,4 +29,5 @@ export {
   Wrapper,
   SingleTab,
   CardReview,
+  MiniRecipe,
 };
