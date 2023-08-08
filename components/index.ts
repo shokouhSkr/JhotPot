@@ -13,10 +13,12 @@ import Stat from "./Stat";
 import SingleTab from "./SingleTab";
 import CardReview from "./CardReview";
 import MiniRecipe from "./MiniRecipe";
+import Ingredient from "./Ingredient";
 
 export {
   DarkModeToggle,
   SidebarBtn,
+  Ingredient,
   Footer,
   Stat,
   CardRecipe,

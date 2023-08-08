@@ -11,6 +11,9 @@ const roboto = Roboto({
 export const metadata = {
   title: "JhotPot | Discover Delicious Recipes Using Your Fridge's Ingredients",
   description: "Discover Delicious Recipes Using Your Fridge's Ingredients",
+  manifest: "/manifest.json",
+  icons: { apple: "/icon.png" },
+  themeColor: "#fff",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

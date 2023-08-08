@@ -5,7 +5,7 @@ import { Header, Wrapper, Stat, SingleTab, CardReview, Category, MiniRecipe } fr
 import Image from "next/image";
 import img from "@/public/images/person.jpg";
 import { BsBellFill, BsCloudUpload } from "react-icons/bs";
-import { recipes } from "@/helpers/constants";
+import { categoryItems, recipes } from "@/helpers/constants";
 
 const Profile = () => {
   const [activeTab, setActiveTab] = useState<"Recipes" | "Reviews">("Reviews");
@@ -74,12 +74,12 @@ const Profile = () => {
         {/* RECIPES TAB */}
         <div className={`${activeTab === "Recipes" ? "block" : "hidden"} w-full`}>
           <div className="mt-4">
-            <Category />
+            <Category title />
           </div>
 
-          <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-8 2xs:grid-cols-2">
-            {recipes.map((recipe) => (
-              <MiniRecipe key={recipe.title} {...recipe} />
+          <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-5 2xs:grid-cols-2">
+            {recipes.map((recipe, index) => (
+              <MiniRecipe key={index} {...recipe} />
             ))}
           </div>
         </div>

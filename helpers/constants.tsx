@@ -1,4 +1,4 @@
-import { CategoryItem, FooterLink, CardRecipe } from "@/types";
+import { FooterLink, CardRecipe, CategoryProps } from "@/types";
 import { BsFillPersonFill, BsGridFill, BsGearFill } from "react-icons/bs";
 import { MdBookmark } from "react-icons/md";
 
@@ -25,7 +25,7 @@ export const footerLinks: FooterLink[] = [
   },
 ];
 
-export const categoryItems: CategoryItem[] = [
+export const categoryItems: CategoryProps = [
   {
     title: "All",
     image: "/shrimp.svg",
@@ -59,7 +59,28 @@ export const recipes: CardRecipe[] = [
     image: "/images/pizza1.png",
     category: "Chinese",
     time: 30,
-    ingredients: 6,
+    ingredients: [
+      {
+        title: "Sesame oil",
+        image: "/shrimp.svg",
+      },
+      {
+        title: "Garlic",
+        image: "/noodle.svg",
+      },
+      {
+        title: "Basil",
+        image: "/noodle.svg",
+      },
+      {
+        title: "Eggs",
+        image: "/noodle.svg",
+      },
+      {
+        title: "Butter",
+        image: "/shrimp.svg",
+      },
+    ],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsum dolor sit amet voluptate.",
   },
@@ -68,7 +89,20 @@ export const recipes: CardRecipe[] = [
     image: "/images/pizza1.png",
     category: "Persian",
     time: 20,
-    ingredients: 7,
+    ingredients: [
+      {
+        title: "Eggs",
+        image: "/noodle.svg",
+      },
+      {
+        title: "Butter",
+        image: "/shrimp.svg",
+      },
+      {
+        title: "Sesame oil",
+        image: "/shrimp.svg",
+      },
+    ],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsum dolor sit amet voluptate.",
   },
@@ -77,7 +111,24 @@ export const recipes: CardRecipe[] = [
     image: "/images/pizza1.png",
     category: "Persian",
     time: 20,
-    ingredients: 5,
+    ingredients: [
+      {
+        title: "Basil",
+        image: "/noodle.svg",
+      },
+      {
+        title: "Garlic",
+        image: "/noodle.svg",
+      },
+      {
+        title: "Eggs",
+        image: "/noodle.svg",
+      },
+      {
+        title: "Sesame oil",
+        image: "/shrimp.svg",
+      },
+    ],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsum dolor sit amet voluptate.",
   },
@@ -86,7 +137,24 @@ export const recipes: CardRecipe[] = [
     image: "/images/pizza1.png",
     category: "Hindi",
     time: 10,
-    ingredients: 2,
+    ingredients: [
+      {
+        title: "Butter",
+        image: "/shrimp.svg",
+      },
+      {
+        title: "Sesame oil",
+        image: "/shrimp.svg",
+      },
+      {
+        title: "Basil",
+        image: "/noodle.svg",
+      },
+      {
+        title: "Eggs",
+        image: "/noodle.svg",
+      },
+    ],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsum dolor sit amet voluptate.",
   },
@@ -95,7 +163,20 @@ export const recipes: CardRecipe[] = [
     image: "/images/pizza1.png",
     category: "Arabic",
     time: 25,
-    ingredients: 4,
+    ingredients: [
+      {
+        title: "Garlic",
+        image: "/noodle.svg",
+      },
+      {
+        title: "Eggs",
+        image: "/noodle.svg",
+      },
+      {
+        title: "Basil",
+        image: "/noodle.svg",
+      },
+    ],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsum dolor sit amet voluptate.",
   },
@@ -104,7 +185,28 @@ export const recipes: CardRecipe[] = [
     image: "/images/pizza1.png",
     category: "Italian",
     time: 60,
-    ingredients: 5,
+    ingredients: [
+      {
+        title: "Basil",
+        image: "/noodle.svg",
+      },
+      {
+        title: "Sesame oil",
+        image: "/shrimp.svg",
+      },
+      {
+        title: "Garlic",
+        image: "/noodle.svg",
+      },
+      {
+        title: "Butter",
+        image: "/shrimp.svg",
+      },
+      {
+        title: "Eggs",
+        image: "/noodle.svg",
+      },
+    ],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsum dolor sit amet voluptate.",
   },
@@ -114,27 +216,78 @@ export const savedRecipes: CardRecipe[] = [
   {
     title: "Hot & Prawn Pizza",
     image: "/images/pizza1.png",
-    category: "Chinese",
-    time: 30,
-    ingredients: 6,
+    category: "Hindi",
+    time: 10,
+    ingredients: [
+      {
+        title: "Butter",
+        image: "/shrimp.svg",
+      },
+      {
+        title: "Sesame oil",
+        image: "/shrimp.svg",
+      },
+      {
+        title: "Basil",
+        image: "/noodle.svg",
+      },
+      {
+        title: "Eggs",
+        image: "/noodle.svg",
+      },
+    ],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsum dolor sit amet voluptate.",
   },
   {
     title: "Hot & Prawn Pizza",
     image: "/images/pizza1.png",
-    category: "Persian",
-    time: 20,
-    ingredients: 7,
+    category: "Arabic",
+    time: 25,
+    ingredients: [
+      {
+        title: "Garlic",
+        image: "/noodle.svg",
+      },
+      {
+        title: "Eggs",
+        image: "/noodle.svg",
+      },
+      {
+        title: "Basil",
+        image: "/noodle.svg",
+      },
+    ],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsum dolor sit amet voluptate.",
   },
   {
     title: "Hot & Prawn Pizza",
     image: "/images/pizza1.png",
-    category: "Persian",
-    time: 20,
-    ingredients: 5,
+    category: "Italian",
+    time: 60,
+    ingredients: [
+      {
+        title: "Basil",
+        image: "/noodle.svg",
+      },
+      {
+        title: "Sesame oil",
+        image: "/shrimp.svg",
+      },
+      {
+        title: "Garlic",
+        image: "/noodle.svg",
+      },
+      {
+        title: "Butter",
+        image: "/shrimp.svg",
+      },
+      {
+        title: "Eggs",
+        image: "/noodle.svg",
+      },
+    ],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsum dolor sit amet voluptate.",
   },

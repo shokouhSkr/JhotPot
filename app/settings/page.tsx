@@ -1,5 +1,11 @@
+import Button from "@/components/Button";
+
 const Settings = () => {
-  return <div>Settings</div>;
+  return (
+    <div>
+      <Button />
+    </div>
+  );
 };
 
 export default Settings;

@@ -22,17 +22,17 @@ export type NavbarBtnProps = {
   icon: ReactNode;
 };
 
-export type CategoryItem = {
+export type CategoryProps = {
   title: string;
   image: string;
-};
+}[];
 
 export type CardRecipe = {
   title: string;
   image: string;
   category: string;
   time: number;
-  ingredients: number;
+  ingredients: { title: string; image: string }[];
   description: string;
 };
 
@@ -40,4 +40,19 @@ export type SingleTabProps = {
   activeTab: "Recipes" | "Reviews";
   setActiveTab: Dispatch<SetStateAction<"Recipes" | "Reviews">>;
   text: "Recipes" | "Reviews";
+};
+
+export type InfoCardProps = {
+  icon: ReactNode;
+  text: number;
+};
+
+export type ShowMoreProps = {
+  text: string;
+  maxChars: number;
+};
+
+export type IngredientProps = {
+  image: string;
+  title: string;
 };

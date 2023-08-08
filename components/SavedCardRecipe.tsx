@@ -47,7 +47,7 @@ const SavedCardRecipe = ({ title, image, category, time, ingredients }: CardReci
             <span className="text-lg">
               <PiPepperBold />
             </span>
-            <span className="text-xs">{ingredients} ing</span>
+            <span className="text-xs">{ingredients.length} ing</span>
           </div>
         </div>
       </div>
