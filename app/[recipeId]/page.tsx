@@ -22,13 +22,14 @@ const txt = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum cum ar
 
 const SingleRecipe = ({ params }: { params: { recipeId: string } }) => {
   return (
-    <section className="bg-[#fec5a8]">
-      <Header />
-
-      <div className="relative rounded-t-[26px] bg-white px-8 py-5">
+    <section className="overflow-hidden">
+      <div className="h-24 bg-[#fec5a8] p-4">
+        <Header />
+      </div>
+      <div className="relative z-20 -mt-4 rounded-t-[26px] bg-white px-8 py-5">
         {/* IMAGE */}
-        <div className="absolute -right-12 -top-[6.25rem]">
-          <Image src={img} alt="oooi" width={250} height={250} />
+        <div className="absolute -right-[3.25rem] -top-[7.25rem] transition-transform duration-500 hover:rotate-[30deg]">
+          <Image src={img} alt="pizza" width={250} height={250} />
         </div>
 
         {/* BUTTONS */}
@@ -77,11 +78,14 @@ const SingleRecipe = ({ params }: { params: { recipeId: string } }) => {
         {/* INGREDIENTS */}
         <div className="mb-8">
           <h5 className="mb-2 font-semibold">Ingredients (5)</h5>
-          <div className="flex items-center gap-4">
+          <div className="hide-scrollbar flex items-center gap-4 overflow-scroll">
             <Ingredient image={img2} title="onion" />
             <Ingredient image={img2} title="mint" />
             <Ingredient image={img2} title="garlic" />
             <Ingredient image={img2} title="eggs" />
+            <Ingredient image={img2} title="oil" />
+            <Ingredient image={img2} title="oil" />
+            <Ingredient image={img2} title="oil" />
             <Ingredient image={img2} title="oil" />
           </div>
         </div>
