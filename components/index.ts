@@ -14,6 +14,7 @@ import SingleTab from "./SingleTab";
 import CardReview from "./CardReview";
 import MiniRecipe from "./MiniRecipe";
 import Ingredient from "./Ingredient";
+import SearchModal from "./SearchModal";
 
 export {
   DarkModeToggle,
@@ -32,4 +33,5 @@ export {
   SingleTab,
   CardReview,
   MiniRecipe,
+  SearchModal,
 };

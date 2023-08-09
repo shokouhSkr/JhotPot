@@ -1,32 +1,20 @@
 "use client";
 
-import { useState } from "react";
 import { LuAlignJustify, LuSearch } from "react-icons/lu";
+import { openSearchModal } from "@/redux/features/modal/modalSlice";
+import { useAppDispatch } from "@/redux/hooks";
 import NavbarBtn from "./SidebarBtn";
 
-const Navbar = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
-  const [isSearchModalOpen, setIsSearchModalOpen] = useState<boolean>(false);
+const Sidebar = () => {
+  const dispatch = useAppDispatch();
 
   return (
     <aside className="fixed bottom-[70px] left-0 top-0 w-14 bg-navbar">
       <nav className="mt-[15px] p-1">
         {/* BUTTONS */}
         <div className="mb-16 flex flex-col items-center gap-2">
-          <NavbarBtn
-            icon={<LuAlignJustify />}
-            clickHandler={() => {
-              setIsSidebarOpen(true);
-              console.log("open sidebar");
-            }}
-          />
-          <NavbarBtn
-            icon={<LuSearch />}
-            clickHandler={() => {
-              setIsSearchModalOpen(true);
-              console.log("open search modal");
-            }}
-          />
+          <NavbarBtn icon={<LuAlignJustify />} clickHandler={() => dispatch(openSearchModal())} />
+          <NavbarBtn icon={<LuSearch />} clickHandler={() => console.log("search")} />
         </div>
 
         {/* LINKS */}
@@ -49,4 +37,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Sidebar;

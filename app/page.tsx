@@ -1,4 +1,4 @@
-import { Category, Sidebar, Recipes } from "@/components";
+import { Category, Sidebar, Recipes, SearchModal } from "@/components";
 import { categoryItems } from "@/helpers/constants";
 
 export default function Home() {
@@ -10,6 +10,7 @@ export default function Home() {
       <Category image title />
       <Sidebar />
       <Recipes />
+      <SearchModal />
     </section>
   );
 }

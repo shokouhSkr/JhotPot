@@ -1,5 +1,5 @@
 import { Roboto } from "next/font/google";
-import Providers from "../providers/Providers";
+import Providers from "./providers/Providers";
 import "./globals.css";
 import { Footer } from "@/components";
 

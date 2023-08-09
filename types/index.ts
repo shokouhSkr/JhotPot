@@ -56,3 +56,7 @@ export type IngredientProps = {
   image: string;
   title: string;
 };
+
+export type InitialState = {
+  isSearchModalOpen: boolean;
+};
