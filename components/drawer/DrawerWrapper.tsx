@@ -10,7 +10,7 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
       <aside
         className={`${
           isDrawerOpen ? "translate-x-0" : "-translate-x-80"
-        } fixed inset-y-0 left-0 z-50 w-72 bg-navbar p-4 shadow-lg transition-transform duration-300`}
+        } fixed inset-y-0 left-0 z-50 w-72 bg-navbar shadow-lg transition-transform duration-300`}
       >
         {/* CIRCLES */}
         <div className="absolute -left-16 -top-12 mx-auto h-[300px] w-[300px] rounded-full bg-footer">

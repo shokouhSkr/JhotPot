@@ -1,6 +1,7 @@
-import { FooterLink, CardRecipe, CategoryProps } from "@/types";
-import { BsFillPersonFill, BsGridFill, BsGearFill } from "react-icons/bs";
+import { FooterLink, CardRecipe, CategoryProps, DrawerLink } from "@/types";
+import { BsFillPersonFill, BsGridFill, BsGearFill, BsCloudyFill } from "react-icons/bs";
 import { MdBookmark } from "react-icons/md";
+import { PiForkKnifeFill } from "react-icons/pi";
 
 export const footerLinks: FooterLink[] = [
   {
@@ -290,5 +291,33 @@ export const savedRecipes: CardRecipe[] = [
     ],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsum dolor sit amet voluptate.",
+  },
+];
+
+export const drawerLinks: DrawerLink[] = [
+  {
+    title: "My Recipe",
+    icon: <PiForkKnifeFill />,
+    path: "/my-recipe",
+  },
+  {
+    title: "Saved",
+    icon: <MdBookmark />,
+    path: "/saved",
+  },
+  {
+    title: "My Profile",
+    icon: <BsFillPersonFill />,
+    path: "/profile",
+  },
+  {
+    title: "Settings",
+    icon: <BsGearFill />,
+    path: "/settings",
+  },
+  {
+    title: "About",
+    icon: <BsCloudyFill />,
+    path: "/about",
   },
 ];

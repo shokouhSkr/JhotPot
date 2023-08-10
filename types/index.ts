@@ -68,3 +68,9 @@ export type HeaderType = {
   content?: React.ReactNode;
   clickHandler?: () => void;
 };
+
+export type DrawerLink = {
+  icon: React.ReactNode;
+  title: string;
+  path: string;
+};

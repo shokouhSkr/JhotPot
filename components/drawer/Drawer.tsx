@@ -8,6 +8,9 @@ import { BsBellFill } from "react-icons/bs";
 import Image from "next/image";
 import img from "@/public/images/person.jpg";
 import { getGreetingPeriod } from "@/helpers/utils";
+import { drawerLinks } from "@/helpers/constants";
+import DrawerLink from "./DrawerLink";
+import { TbLogout2 } from "react-icons/tb";
 
 const Drawer = () => {
   const { isDrawerOpen } = useAppSelector((store) => store.modal);
@@ -23,17 +26,20 @@ const Drawer = () => {
 
       {/* OVERLAY */}
       <DrawerWrapper>
-        <Header
-          icon={<PiXBold />}
-          content={
-            <span className="pr-2">
-              <BsBellFill />
-            </span>
-          }
-          clickHandler={() => dispatch(closeDrawer())}
-        />
+        {/* HEADER */}
+        <div className="px-5 py-4">
+          <Header
+            icon={<PiXBold />}
+            content={
+              <span className="pr-2">
+                <BsBellFill />
+              </span>
+            }
+            clickHandler={() => dispatch(closeDrawer())}
+          />
+        </div>
         {/* AVATAR */}
-        <div className="flex-center mb-4 mt-10">
+        <div className="flex-center mb-4 mt-8">
           <div className="avatar">
             <div className="relative z-20 h-20 w-20 rounded-md">
               <Image src={img} alt="image" fill className="object-cover" />
@@ -42,9 +48,28 @@ const Drawer = () => {
         </div>
 
         {/* TITLE */}
-        <div className="relative z-30 mx-auto mb-6 w-36 text-center font-semibold">
+        <div className="relative z-30 mx-auto mb-8 w-36 text-center font-semibold">
           <h3 className="-mb-1 text-sm">Good {getGreetingPeriod()}, Anup!</h3>
         </div>
+
+        {/* LINKS */}
+        <div className="relative z-50 flex flex-col text-sm">
+          {drawerLinks.map((link) => (
+            <DrawerLink key={link.title} {...link} />
+          ))}
+        </div>
+
+        {/* LOGOUT */}
+        <button
+          type="button"
+          onClick={() => dispatch(closeDrawer())}
+          className="absolute bottom-8 left-5 flex items-center text-sm"
+        >
+          <span className="mr-4 text-xl">
+            <TbLogout2 />
+          </span>
+          <span>Log Out</span>
+        </button>
       </DrawerWrapper>
     </>
   );
