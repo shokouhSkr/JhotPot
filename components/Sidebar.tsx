@@ -1,7 +1,7 @@
 "use client";
 
 import { LuAlignJustify, LuSearch } from "react-icons/lu";
-import { openSearchModal } from "@/redux/features/modal/modalSlice";
+import { openDrawer, openSearchModal } from "@/redux/features/modal/modalSlice";
 import { useAppDispatch } from "@/redux/hooks";
 import NavbarBtn from "./SidebarBtn";
 
@@ -13,8 +13,8 @@ const Sidebar = () => {
       <nav className="mt-[15px] p-1">
         {/* BUTTONS */}
         <div className="mb-16 flex flex-col items-center gap-2">
-          <NavbarBtn icon={<LuAlignJustify />} clickHandler={() => dispatch(openSearchModal())} />
-          <NavbarBtn icon={<LuSearch />} clickHandler={() => console.log("search")} />
+          <NavbarBtn icon={<LuAlignJustify />} clickHandler={() => dispatch(openDrawer())} />
+          <NavbarBtn icon={<LuSearch />} clickHandler={() => dispatch(openSearchModal())} />
         </div>
 
         {/* LINKS */}

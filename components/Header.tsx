@@ -1,17 +1,23 @@
+import { HeaderType } from "@/types";
 import Link from "next/link";
-import { PiCaretLeftBold } from "react-icons/pi";
 
-const Header = ({ title, component }: { title?: string; component?: React.ReactNode }) => {
+const Header = ({ title, content, icon, clickHandler }: HeaderType) => {
   return (
     <header className="flex-between relative z-20 my-3">
       <div className="flex items-center gap-4">
-        <Link href="/" className="p-1">
-          <PiCaretLeftBold />
-        </Link>
+        {clickHandler ? (
+          <button onClick={clickHandler} type="button">
+            {icon}
+          </button>
+        ) : (
+          <Link href="/" className="p-1">
+            {icon}
+          </Link>
+        )}
         {title && <span>{title}</span>}
       </div>
 
-      {component}
+      {content}
     </header>
   );
 };

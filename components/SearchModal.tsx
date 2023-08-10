@@ -12,7 +12,7 @@ const SearchModal = () => {
       id="my_modal_3"
       className={`${
         isSearchModalOpen ? "block" : "hidden"
-      } fixed inset-0 h-screen w-screen bg-white`}
+      } fixed inset-0 h-[calc(100dvh)] w-screen bg-navbar p-4`}
     >
       <button onClick={() => dispatch(closeSearchModal())}>hi</button>
     </dialog>

@@ -1,11 +1,16 @@
 import { Category, Header, SavedCardRecipe } from "@/components";
 import { categoryItems, savedRecipes } from "@/helpers/constants";
+import { PiCaretLeftBold } from "react-icons/pi";
 
 const Saved = () => {
   return (
     <section>
       <div className="sticky left-0 right-0 top-0 z-20 bg-white p-4">
-        <Header title="Saved" component={<span className="pr-2 text-xs">22 recipes</span>} />
+        <Header
+          icon={<PiCaretLeftBold />}
+          title="Saved"
+          content={<span className="pr-2 text-xs">22 recipes</span>}
+        />
         <Category title />
       </div>
 

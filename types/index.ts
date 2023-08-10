@@ -59,4 +59,12 @@ export type IngredientProps = {
 
 export type InitialState = {
   isSearchModalOpen: boolean;
+  isDrawerOpen: boolean;
+};
+
+export type HeaderType = {
+  icon: React.ReactNode;
+  title?: string;
+  content?: React.ReactNode;
+  clickHandler?: () => void;
 };

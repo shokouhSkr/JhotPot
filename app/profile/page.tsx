@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { Header, Wrapper, Stat, SingleTab, CardReview, Category, MiniRecipe } from "@/components";
+import { Header, Stat, SingleTab, CardReview, Category, MiniRecipe } from "@/components";
 import Image from "next/image";
 import img from "@/public/images/person.jpg";
 import { BsBellFill, BsCloudUpload } from "react-icons/bs";
 import { categoryItems, recipes } from "@/helpers/constants";
+import { PiCaretLeftBold } from "react-icons/pi";
+import Wrapper from "@/components/profile/Wrapper";
 
 const Profile = () => {
   const [activeTab, setActiveTab] = useState<"Recipes" | "Reviews">("Reviews");
@@ -13,7 +15,8 @@ const Profile = () => {
   return (
     <Wrapper>
       <Header
-        component={
+        icon={<PiCaretLeftBold />}
+        content={
           <span className="pr-2">
             <BsBellFill />
           </span>

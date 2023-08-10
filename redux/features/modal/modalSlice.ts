@@ -4,7 +4,8 @@ import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { InitialState } from "@/types";
 
 const initialState: InitialState = {
-  isSearchModalOpen: true,
+  isSearchModalOpen: false,
+  isDrawerOpen: false,
 };
 
 const modalSlice = createSlice({
@@ -18,6 +19,14 @@ const modalSlice = createSlice({
     closeSearchModal: (state) => {
       state.isSearchModalOpen = false;
       console.log("close search");
+    },
+    openDrawer: (state) => {
+      state.isDrawerOpen = true;
+      console.log("open menu");
+    },
+    closeDrawer: (state) => {
+      state.isDrawerOpen = false;
+      console.log("close menu");
     },
     // number is the type of payload
     // incrementByAmount: (state, action: PayloadAction<number>) => {
@@ -43,5 +52,5 @@ const modalSlice = createSlice({
   // },
 });
 
-export const { openSearchModal, closeSearchModal } = modalSlice.actions;
+export const { openSearchModal, closeSearchModal, openDrawer, closeDrawer } = modalSlice.actions;
 export default modalSlice.reducer;
