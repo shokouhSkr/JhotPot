@@ -11,9 +11,11 @@ import {
   PiSlidersBold,
   PiXBold,
 } from "react-icons/pi";
+import { savedRecipes } from "@/helpers/constants";
+import SavedCardRecipe from "./saved/SavedCardRecipe";
 
 const SearchModal = () => {
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
   const [inputValue, setInputValue] = useState<string>("");
   const [inputValues, setInputValues] = useState<string[]>([]);
   const { isSearchModalOpen } = useAppSelector((store) => store.modal);
@@ -43,7 +45,7 @@ const SearchModal = () => {
     <div
       className={`${
         isSearchModalOpen ? "block" : "hidden"
-      } fixed inset-x-0 bottom-[70px] top-0 z-50 bg-navbar p-4`}
+      } fixed inset-x-0 bottom-[70px] top-0 z-50 bg-navbar p-6`}
     >
       <Header
         title="Search filter"
@@ -52,7 +54,7 @@ const SearchModal = () => {
       />
 
       {/* SEARCH INPUT */}
-      <div className="mb-6 flex items-center gap-4 text-sm">
+      <div className="flex items-center gap-4 text-sm">
         <form onSubmit={(e) => e.preventDefault()} className="relative w-full">
           <span className="absolute right-3 top-[0.75rem]">
             <PiMagnifyingGlassBold className="text-2xl text-orange" />
@@ -75,7 +77,7 @@ const SearchModal = () => {
       </div>
 
       {active && (
-        <div className="space-y-6 text-sm">
+        <div className="mt-6 space-y-6 text-sm">
           {/* TIME RANGE SLIDER */}
           <div className="text-xs font-semibold">
             <div className="flex-between">
@@ -165,7 +167,13 @@ const SearchModal = () => {
         </div>
       )}
 
-      {!active && <p>list of recipes</p>}
+      {!active && (
+        <div className="mt-10 flex flex-col gap-9">
+          {savedRecipes.map((item) => {
+            return <SavedCardRecipe key={item.title} {...item} />;
+          })}
+        </div>
+      )}
     </div>
   );
 };
