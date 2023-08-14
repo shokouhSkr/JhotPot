@@ -45,7 +45,7 @@ const SearchModal = () => {
     <div
       className={`${
         isSearchModalOpen ? "block" : "hidden"
-      } fixed inset-x-0 bottom-[70px] top-0 z-50 bg-navbar p-6`}
+      } fixed inset-x-0 bottom-[70px] top-0 z-50 overflow-scroll bg-navbar px-6 py-4`}
     >
       <Header
         title="Search filter"
@@ -61,8 +61,8 @@ const SearchModal = () => {
           </span>
           <input
             type="text"
-            placeholder="pizza"
-            className="w-full rounded-md border-none p-3  focus:outline-none focus:ring-0"
+            placeholder="Pizza"
+            className="w-full rounded-md border-none p-4 focus:outline-none focus:ring-0"
           />
         </form>
 
@@ -105,7 +105,7 @@ const SearchModal = () => {
               <span className="absolute right-3 top-1/2 -translate-y-1/2">
                 <PiCaretDownBold />
               </span>
-              <select className="w-full appearance-none rounded-md border-none bg-white p-3 outline-offset-0 outline-orange">
+              <select className="w-full appearance-none rounded-md border-none bg-white p-4 outline-offset-0 outline-orange">
                 <option defaultChecked>Chinese</option>
                 <option>Han Solo</option>
                 <option>Greedo</option>
@@ -123,6 +123,9 @@ const SearchModal = () => {
               <button
                 type="button"
                 onClick={addInputValueHandler}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") e.preventDefault();
+                }}
                 className="absolute right-1 top-1/2 -translate-y-1/2 p-2"
               >
                 <PiPlusCircle className="text-lg text-orange" />
@@ -132,12 +135,15 @@ const SearchModal = () => {
                 placeholder="Onion"
                 value={inputValue}
                 onChange={changeInputHandler}
-                className="w-full appearance-none rounded-md border-none bg-white p-3 outline-offset-0 outline-orange"
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") addInputValueHandler();
+                }}
+                className="w-full appearance-none rounded-md border-none bg-white p-4 outline-offset-0 outline-orange"
               />
             </div>
 
             {/* Show added input values */}
-            <div className="mt-3 flex items-center gap-2 text-xs">
+            <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
               {inputValues.map((value) => (
                 <button
                   key={value}
