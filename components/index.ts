@@ -15,6 +15,7 @@ import MiniRecipe from "./profile/MiniRecipe";
 import Ingredient from "./Ingredient";
 import SearchModal from "./SearchModal";
 import DrawerWrapper from "./drawer/DrawerWrapper";
+import Upload from "./Upload";
 
 export {
   DarkModeToggle,
@@ -34,4 +35,5 @@ export {
   MiniRecipe,
   SearchModal,
   DrawerWrapper,
+  Upload,
 };

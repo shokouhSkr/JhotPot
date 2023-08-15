@@ -118,6 +118,7 @@ const SearchModal = () => {
             <div className="mb-2 flex items-center justify-start text-xs font-semibold">
               <span className="text-main-gray">Sub Ingredients</span>
             </div>
+
             <div className="relative">
               {/* plus button component(common) */}
               <button

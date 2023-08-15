@@ -4,6 +4,7 @@ import Image from "next/image";
 import img from "@/public/images/pizza1.png";
 import img2 from "@/public/shrimp.svg";
 import {
+  PiCaretLeftBold,
   PiCookingPotBold,
   PiFireSimpleBold,
   PiHeartStraightBold,
@@ -23,8 +24,8 @@ const txt = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum cum ar
 const SingleRecipe = ({ params }: { params: { recipeId: string } }) => {
   return (
     <section className="overflow-hidden">
-      <div className="h-24 bg-[#fec5a8] p-4">
-        <Header />
+      <div className="h-24 bg-[#fec5a8] px-[1.75rem] py-4">
+        <Header icon={<PiCaretLeftBold />} />
       </div>
       <div className="relative z-20 -mt-4 rounded-t-[26px] bg-white px-8 py-5">
         {/* IMAGE */}
