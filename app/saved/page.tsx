@@ -11,7 +11,7 @@ const Saved = () => {
           title="Saved"
           content={<span className="pr-2 text-xs">22 recipes</span>}
         />
-        <Category title />
+        <Category withTitle />
       </div>
 
       <div className="flex flex-col gap-9 p-6">

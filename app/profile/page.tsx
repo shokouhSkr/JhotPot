@@ -77,7 +77,7 @@ const Profile = () => {
         {/* RECIPES TAB */}
         <div className={`${activeTab === "Recipes" ? "block" : "hidden"} w-full`}>
           <div className="mt-4">
-            <Category title />
+            <Category withTitle />
           </div>
 
           <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-5 2xs:grid-cols-2">

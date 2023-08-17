@@ -15,7 +15,13 @@ import MiniRecipe from "./profile/MiniRecipe";
 import Ingredient from "./Ingredient";
 import SearchModal from "./SearchModal";
 import DrawerWrapper from "./drawer/DrawerWrapper";
-import Upload from "./Upload";
+import UploadImage from "./my-recipe/UploadImage";
+import RecipeForm from "./my-recipe/RecipeForm";
+import Input from "./my-recipe/Input";
+import TimeRangeSlider from "./TimeRangeSlider";
+import SelectCuisine from "./SelectCuisine";
+import AddIngredients from "./AddIngredients";
+import Calories from "./Calories";
 
 export {
   DarkModeToggle,
@@ -35,5 +41,11 @@ export {
   MiniRecipe,
   SearchModal,
   DrawerWrapper,
-  Upload,
+  UploadImage,
+  RecipeForm,
+  Input,
+  TimeRangeSlider,
+  SelectCuisine,
+  AddIngredients,
+  Calories,
 };

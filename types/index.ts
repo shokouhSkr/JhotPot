@@ -5,6 +5,11 @@ export type ThemeContextProps = {
   toggleMode: () => void;
 };
 
+export type CategoryType = {
+  withImage?: boolean;
+  withTitle?: boolean;
+};
+
 export type FooterItemsType = {
   title: string;
   icon: ReactNode;
